@@ -5,3 +5,7 @@
 * Michael Odhiambo
 
 # Technologies used
+* Flask
+Python
+
+# 
