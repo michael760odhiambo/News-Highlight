@@ -6,7 +6,7 @@
 
 # Technologies used
 * Flask
-Python
+* Python
 
 # Setup/Installation Instruction
 * git clone to your local machine
@@ -15,3 +15,5 @@ Python
 
 * you can reach on social media through
 * E-mail : michaelodhiambo760@gmail.com
+
+# License
