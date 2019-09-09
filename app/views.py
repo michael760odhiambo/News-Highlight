@@ -3,6 +3,7 @@ from flask import render_template,request,redirect,url_for
 from app import app
 from .request import get_everything
 from .request import get_news,get_news,search_news
+
 # Views
 @app.route('/')
 def index():
@@ -43,6 +44,6 @@ def search(news_name):
     '''
     news_name_list = news_name.split(" ")
     news_name_format = "+".join(news_name_list)
-    searched_news = search_news(news_name_format)
-    title = f'search results for {news_name}'
+    #searched_news = search_news(news_name_format)
+    #title = f'search results for {news_name}'
     return render_template('search.html',news = searched_news,title=title) 
