@@ -12,3 +12,6 @@ Python
 * git clone to your local machine
 
 # Contact
+
+* you can reach on social media through
+* E-mail : michaelodhiambo760@gmail.com
