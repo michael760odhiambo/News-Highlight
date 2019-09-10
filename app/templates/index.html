@@ -9,27 +9,50 @@
 {% block content %}
 
 
-<div class="container">
-    <form>
-        <input type="text" name="news_query" placeholder="Search for a News" class="form-control">
-        <input type="submit"  value="Submit" class="btn btn-default">
-    </form>
+<div class="container-fluid">
+        <div class="landingpage" style="height: 300px">
+
+               
+            <form>
+                    <input type="text" name="news_query" placeholder="Search for a News" class="form-control bg-info">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/15/09/33/news-636978_960_720.jpg" height="300px" width="100%">
+                    <input type="submit"  value="Submit" class="btn btn-success">
+                   
+                </form> 
+               
+             
+            </div>
+
+ <div style="height: 80px">
+
+ </div>
+
+<div class='container-fluid'>
+
+        <!-- Popular news -->
+        <h3 style="text-align: center"> Breaking  News</h3>
+        
+                <ul>
+                        {{ macro.displayNewsList(popular_news)}}
+                    </ul> 
+        
+        <!-- Upcoming news  -->
+        <h3 style="text-align: center"> Headlines News </h3>
+       
+                <ul>
+                        {{ macro.displayNewsList(entertainment)}}
+                    </ul>
+       
+        <!-- Now showing news -->
+        <h3 style="text-align: center,"> Coming next</h3>
+      
+        
+                <ul>
+                        {{ macro.displayNewsList(general)}}
+                    </ul>
+
 
 </div>
-        <!-- Popular news -->
-        <h3> Popular News</h3>
-        <ul>
-            {{ macro.displayNewsList(popular_news)}}
-        </ul>
-        <!-- Upcoming news  -->
-        <h3> Upcoming News </h3>
-        <ul>
-            {{ macro.displayNewsList(upcoming)}}
-        </ul>
-        <!-- Now showing news -->
-        <h3>Now Showing</h3>
-        <ul>
-            {{ macro.displayNewsList(now_showing)}}
-        </ul>
+                </div>      
   {% endblock%}
   

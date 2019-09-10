@@ -1,17 +1,35 @@
 {% macro displayNewsList(news_list) %}
 
     {% for news in news_list %}
-      <div>
-          <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 news-card">
-                <h2>{{news.title}}</h2> 
-                <img src="{{news.urlToImage}}" width='250px' alt="{{news.title}}"  class="img-responsive">
-                
-                <p>{{ news.description}} </p> 
-                 <small>{{news.author}}</small>
-                 <a href="{{news.url}}" target="_blank">view</a>
+      
+          <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3 news-card">
+                <div class="card" style="width: 18rem;">
+                        <img src="{{news.urlToImage}}" class="card-img-top" alt="{{news.title}}" width="300px" height="200px">
+                        <div class="card-body">
+                          <h5 class="card-title">{{news.title}}</h5>
+                          <p class="card-text">{{ news.description}}</p>
+                          <small>{{news.author}}</small>
+                          <a href="{{news.url}}" class="btn btn-primary" target="_blank">view</a>
+                        </div>
+                      </div>
                     
           </div>
-      </div>
+      
           {% endfor %}
+          {% macro displayReviews(review_list) %}
+    {% for review in review_list %}
+
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 review-card">
+            <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title"> {{ review.title}}</h5>
+                      <p class="card-text">  <p> {{ review.review | truncate(30) }}</p></p>
+                      
+                    </div>
+                  </div>
+    </div>
+    {% endfor %}
+{% endmacro %}
 
 {% endmacro %}
