@@ -37,7 +37,7 @@ def news(news_id):
     '''
     View news page function that returns the news details page and its data
     '''
-    reviews = Review.get_reviews(news.id)
+    #reviews = Review.get_reviews(news.id)
     title = f'{news.title}'
     news = get_news(id)
     return render_template('news.html',id = news_id,news=news,reviews = reviews,title=title)    
@@ -58,7 +58,7 @@ def new_review(id):
     form = ReviewForm()
     news = get_news(id)
 
-    all_reviews = []
+    #all_reviews = []
 
     if form.validate_on_submit():
         title = form.title.data
@@ -70,15 +70,6 @@ def new_review(id):
     title = f'{news.title} review'
     return render_template('new_review.html',title = title, review_form=form, news=news)
 
-@classmethod
-def get_reviews(cls,id):
-    response = []
-    for review in cls.all_reviews:
-            if review.news_id == id:
-                response.append(review)
-
-        
-    return response    
 
         
 
